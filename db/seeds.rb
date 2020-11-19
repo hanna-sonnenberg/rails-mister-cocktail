@@ -28,7 +28,6 @@ bloody_mary = { name: 'Bloody Mary' }
 mojito = { name: 'Mojito' }
 mai_tai = { name: 'Mai Tai' }
 
-
 [pina_colada, mai_tai, bloody_mary, mojito].each do |attributes|
   cocktail = Cocktail.create!(attributes)
   puts "Created #{cocktail.name}"

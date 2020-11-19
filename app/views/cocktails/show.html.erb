@@ -2,3 +2,10 @@
 display dose needed for each ingredient -->
 
 <h2><%= @cocktail.name %></h2>
+
+<% @cocktail.doses.each do |dose| %>
+    <li><%= dose.description %> - <%= dose.ingredient.name %></li>
+  <% end %>
+
+
+<%= link_to 'add a new dose', new_cocktail_dose_path(@cocktail) %>
