@@ -4,7 +4,13 @@ display dose needed for each ingredient -->
 <h2><%= @cocktail.name %></h2>
 
 <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.description %> - <%= dose.ingredient.name %></li>
+    <li>
+      <%= dose.description %> - <%= dose.ingredient.name %>
+      <%= link_to "delete a dose",
+        dose_path(dose),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+    </li>
   <% end %>
 
 
