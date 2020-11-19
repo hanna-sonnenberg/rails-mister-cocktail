@@ -20,5 +20,14 @@ end
 
 # CREATE Cocktails
 
+puts "Creating Cocktails"
+
 mint_julep = { name: 'Mint Julep' }
 whiskey_sour = { name: 'Whiskey Sour' }
+
+[mint_julep, whiskey_sour].each do |attributes|
+  cocktail = Cocktail.create!(attributes)
+  puts "Created #{cocktail.name}"
+end
+
+puts "Finished"
