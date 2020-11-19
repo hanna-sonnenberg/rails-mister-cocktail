@@ -22,10 +22,14 @@ end
 
 puts "Creating Cocktails"
 
-mint_julep = { name: 'Mint Julep' }
-whiskey_sour = { name: 'Whiskey Sour' }
+pina_colada = { name: 'Pina Colada' }
+mai_tai = { name: 'Mai Tai' }
+bloody_mary = { name: 'Bloody Mary' }
+mojito = { name: 'Mojito' }
+mai_tai = { name: 'Mai Tai' }
 
-[mint_julep, whiskey_sour].each do |attributes|
+
+[pina_colada, mai_tai, bloody_mary, mojito].each do |attributes|
   cocktail = Cocktail.create!(attributes)
   puts "Created #{cocktail.name}"
 end

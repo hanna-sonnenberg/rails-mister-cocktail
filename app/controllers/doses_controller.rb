@@ -1,2 +1,5 @@
 class DosesController < ApplicationController
+
+
+
 end
