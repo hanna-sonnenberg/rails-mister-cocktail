@@ -18,4 +18,7 @@ objs['drinks'].each do |obj|
 end
 
 
+# CREATE Cocktails
 
+mint_julep = { name: 'Mint Julep' }
+whiskey_sour = { name: 'Whiskey Sour' }
