@@ -9,9 +9,16 @@
 </div>
 
 <!-- display list of cocktails -->
-<ul>
+
+<div class="card-container d-flex flex-wrap flex-row justify-content-center">
   <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+    <div class="card d-flex flex-column align-items-center">
+      <%= image_tag image_url('pina_colada.jpg'), class: 'card-img-top rounded-top' %>
+      <div class="card-body">
+        <h4 class="card-title"><%= cocktail.name %></h4>
+        <%= link_to "Explore", cocktail_path(cocktail), class: 'btn-card' %>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
 
