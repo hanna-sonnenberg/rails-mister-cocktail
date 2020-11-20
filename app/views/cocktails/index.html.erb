@@ -3,7 +3,8 @@
   <div class="container d-flex flex-column align-items-center">
     <h1>V-Cocktails</h1>
     <h4>get inspired and create your own non-alcoholic cocktail</h4>
-    <a class="btn btn-ghost" href="#">Add a new cocktail</a>
+    <%= link_to "Add a new cocktail", new_cocktail_path(@cocktail), class: 'btn-ghost' %>
+    <!-- <a class="btn btn-ghost" href="#">Add a new cocktail</a> -->
   </div>
 </div>
 
@@ -14,4 +15,3 @@
   <% end %>
 </ul>
 
-<%= link_to 'Add a new cocktail', new_cocktail_path(@cocktail) %>
