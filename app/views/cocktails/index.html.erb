@@ -1,18 +1,18 @@
 
 <div class="banner">
-  <div class="d-flex flex-column align-items-center">
+  <div class="container d-flex flex-column align-items-center">
     <h1>V-Cocktails</h1>
     <h4>get inspired and create your own non-alcoholic cocktail</h4>
-    <%= link_to "Add a new cocktail", new_cocktail_path(@cocktail), class: 'btn-ghost' %>
+    <%= link_to "Add a new cocktail", new_cocktail_path(@cocktail), class: 'btn-ghost btn-margin' %>
     <!-- <a class="btn btn-ghost" href="#">Add a new cocktail</a> -->
   </div>
 </div>
 
 <!-- display list of cocktails -->
 
-<div class="card-container d-flex flex-wrap flex-row justify-content-center">
+<div id="index-container" class="card-container d-flex flex-wrap flex-row justify-content-center">
   <% @cocktails.each do |cocktail| %>
-    <div class="card d-flex flex-column align-items-center mb-4 mb-md-4">
+    <div class="card-index d-flex flex-column align-items-center mb-4 mb-md-4">
       <%= image_tag image_url('pina_colada.jpg'), class: 'card-img-top rounded-top' %>
       <div class="card-body">
         <h4 class="card-title"><%= cocktail.name %></h4>
