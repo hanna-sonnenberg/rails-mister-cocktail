@@ -38,10 +38,10 @@ mint_leaves = Ingredient.create(name: 'mint leaves')
 
 puts "Creating Cocktails"
 
-pina_colada = { name: 'Pina Colada', photo_path: 'app/assets/images/pina_colada.jpg' }
-mai_tai = { name: 'Mai Tai', photo_path: 'app/assets/images/mai_tai.jpg' }
-bloody_mary = { name: 'Bloody Mary', photo_path: 'app/assets/images/bloody_mary.jpg' }
-mojito = { name: 'Mojito', photo_path: 'app/assets/images/mojito.jpg' }
+pina_colada = { name: 'Pina Colada', photo_path: 'https://res.cloudinary.com/dglozciyx/image/upload/v1606058252/c5n5gegg6i5septp9jzl59gv8ipt.jpg' }
+mai_tai = { name: 'Mai Tai', photo_path: 'https://res.cloudinary.com/dglozciyx/image/upload/v1606058263/11zqlccgkq1xjpvjsdowv0q3xd28.jpg' }
+bloody_mary = { name: 'Bloody Mary', photo_path: 'https://res.cloudinary.com/dglozciyx/image/upload/v1606058267/2xiwm3w86qxz56tw1z6xs3x4ec55.jpg' }
+mojito = { name: 'Mojito', photo_path: 'https://res.cloudinary.com/dglozciyx/image/upload/v1606058270/4zbqbx6y5vhvgvgmdypb7qj4xaa0.jpg' }
 
 [pina_colada, mai_tai, bloody_mary, mojito].each do |attributes|
   file = URI.open(attributes[:photo_path])
