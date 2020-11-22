@@ -2,7 +2,7 @@
 display dose needed for each ingredient -->
 <div id="show-container" class="container h-100 d-flex flex-row align-items-center justify-content-center">
   <div class="card mb-3 d-flex flex-column align-items-flex-start">
-    <%= image_tag image_url('pina_colada.jpg'), class: 'card-img-top' %>
+    <%= cl_image_tag(@cocktail.photo.key, class: 'card-img-top') %>
     <div class="card-body">
       <h2 class="card-title"><%= @cocktail.name %></h2>
       <% @cocktail.doses.each do |dose| %>

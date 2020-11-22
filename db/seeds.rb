@@ -38,28 +38,18 @@ mint_leaves = Ingredient.create(name: 'mint leaves')
 
 puts "Creating Cocktails"
 
-pina_colada = { name: 'Pina Colada' }
-mai_tai = { name: 'Mai Tai' }
-bloody_mary = { name: 'Bloody Mary' }
-mojito = { name: 'Mojito' }
+pina_colada = { name: 'Pina Colada', photo_path: 'app/assets/images/pina_colada.jpg' }
+mai_tai = { name: 'Mai Tai', photo_path: 'app/assets/images/mai_tai.jpg' }
+bloody_mary = { name: 'Bloody Mary', photo_path: 'app/assets/images/bloody_mary.jpg' }
+mojito = { name: 'Mojito', photo_path: 'app/assets/images/mojito.jpg' }
 
 [pina_colada, mai_tai, bloody_mary, mojito].each do |attributes|
-  cocktail = Cocktail.create(attributes)
+  file = URI.open(attributes[:photo_path])
+  cocktail = Cocktail.create(name: attributes[:name])
+  cocktail.photo.attach(io: file, filename: 'cocktails.jpg', content_type: 'image/jpeg')
   puts "Created #{cocktail.name}"
 end
 
 puts "Finished"
-
-# CREATE cocktails with doses and ingredients
-# pina_colada_cocktail = Cocktail.create(pina_colada)
-
-# CREATE dose
-# Dose.create(description: '1/4 cup', ingredient_id: ice.id, cocktail_id: pina_colada_cocktail.id)
-
-
-
-
-
-
 
 
