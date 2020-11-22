@@ -5,6 +5,7 @@
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
+  font-size: 16px;
 
   &:hover {
     opacity: 0.8;
@@ -20,6 +21,23 @@
   border-radius: 50px;
   font-weight: lighter;
   font-size: 14px;
+
+  &:hover {
+    opacity: 0.8;
+    color: white;
+  }
+}
+
+.btn-form {
+  color: white;
+  background-color: #9e5165;
+  border: 1px solid #9e5165;
+  padding: 8px 24px;
+  border-radius: 5px;
+  font-weight: lighter;
+  font-size: 14px;
+  align-self: flex-start;
+  margin: 10px;
 
   &:hover {
     opacity: 0.8;
